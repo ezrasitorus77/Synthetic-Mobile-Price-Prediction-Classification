@@ -1,2 +1,10 @@
 # Synthetic-Mobile-Price-Prediction-Classification
 I obtain this dataset from Kaggle. Using this synthetic mobile price dataset, I'm trying to find correlation between features and mobile price range through EDA. Also I build a model to predict the "test" dataset.
+
+# CONCLUSION AND RECOMMENDATION
+- Medium cost and high cost mobile don't differ very much. Instead, on some features they overlap each other. This means if the machine failed to predict between those two categories (predict high to medium), company won't suffer loss that much.
+- It's quite easy to distinguish very high cost mobiles from another. Almost all features they have are the biggest (except mobile weight --the lighthest), except number of cores and talk time. Their talk time is still lower than medium cost mobile. This is make senses since more advanced technology result in more battery consumption.
+- RAM and battery power are the only determinant factors, which successfully distinguish every single mobile cost categories in linear pattern.
+- Tuned and scaled SVM Classifier is the best model we can get so far. It has the minimum error rate and the highest recall score. Thus, this model can bring the most minimum loss and the most maximum profit from predicting new mobile data.
+- Bob, the company owner, should be happy because his dream of fighting against Apple and Samsung seems realistic. From the predicted mobile price range, the very high cost mobiles took 26,2% proportion of all predicted data (all categories seems even, but very high cost mobile has the highest percentage). This means Bob's highest quality mobile devices are close enough to existing manufacture's highest standard quality.
+- Medium cost mobile has the lowest proportion of predicted data. But, it's suggested for Bob to merge medium and high cost mobiles into one category / price range. As stated above, because of thin border of differentiation of those two categories, Bob will most likely have slight profit loss (assumed if Bob sells high cost mobile with medium cost mobile's price) since we focus on **decreasing error on very high cost mobiles** rather than **medium - high cost mobiles**.
